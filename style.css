@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #1b3555, #081321 70%);
+    color: #eef5ff;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    padding: 26px;
+    background: #101e30;
+    border: 1px solid #263b54;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px #0005;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.calculator:hover {
+    border-color: #41658d;
+    box-shadow: 0 24px 55px #0007;
+}
+
+h2 {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 27px;
+    color: #e2edff;
+}
+
+p {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #8fa7c2;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 14px;
+    border: 1px solid #304761;
+    border-radius: 10px;
+    background: #0a1625;
+    color: rgb(243, 240, 240);
+    font: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s;
+}
+
+input::placeholder {
+    color: #8295ac;
+}
+
+input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px #60a5fa20;
+    background: #0d1c2e;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+button {
+    min-width: 0;
+    padding: 13px 8px;
+    border: 1px solid #355371;
+    border-radius: 10px;
+    background: #1b3550;
+    color: #e8f2ff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s,
+                transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: #2b527a;
+    border-color: #6ba7e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px #0003;
+}
+
+button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+button:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+#result {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    margin-top: 20px;
+    padding: 14px 10px;
+    border: 1px solid #263f5b;
+    border-radius: 10px;
+    background: #0a1727;
+    color: #93c5fd;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 14px;
+    }
+
+    .calculator {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
